@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	/* margin: 0;
+	padding: 0; */
+}
+/* Podemos importar fuentes desde html:
+<link href=“https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap” rel=“stylesheet”>
+O desde CSS: */
+/* @import url(‘https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap’); */
+
+:root {
+	--green-color: rgb(60, 187, 60);
+	--white-color: white;
+}
+html,
+body {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px;
+	font-size: 15px;
+	font-family: 'Philosopher', sans-serif;
+}
+nav {
+	display: flex;
+	background-color: var(--green-color);
+	padding: 0px 10px;
+	color: var(--white-color);
+	justify-content: space-between;
+	align-items: center;
+}
+.brand_image {
+	color: black;
+}
+nav ul {
+	display: flex;
+}
+nav li {
+	padding-left: 100px;
+	padding-right: 20px;
+	list-style: none;
+}
+nav li a {
+	color: black;
+	text-decoration: none;
+}
+nav li a:hover {
+	color: var(--white-color);
+}
+
+/* MAIN SECTION */
+
+.main_section {
+	padding: 10px;
+	text-align: center;
+}
+.products {
+	position: absolute;
+	top: 50%;
+	background-image: url('../images/curve.png');
+	height: 50vh;
+	width: 100vw;
+	background-size: cover;
+	background-position: center top;
+	padding: 0;
+	display: flex;
+}
+.product {
+	position: relative;
+	top: 3vh;
+	left: 30vw;
+	padding: 10px;
+	margin-top: -100px;
+}
+.product .content {
+	background-color: var(--white-color);
+	padding: 15px;
+	box-shadow: 20px 20px 20px -10px rgba(0, 0, 0, 0.8);
+}
+.img_content {
+	text-align: center;
+}
+.main_button {
+	background-color: var(--green-color);
+	width: 100%;
+	padding: 10px;
+	font-size: 15px;
+	border: 0;
+}
+.main_button:hover {
+	background-color: rgb(44, 102, 44);
+	cursor: pointer;
+}
+.text {
+	padding: 10px;
+}
+.form1 {
+	padding: 20px;
+	margin: 5px;
+	border:5px solid var(--green-color);
+}
+div {
+	padding: 10px;
+}
