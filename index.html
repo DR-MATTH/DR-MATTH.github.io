@@ -9,19 +9,28 @@
 	</head>
 	<body>
 		<div class="contenedor">
-			<header class="header">
-				<h1>Use arrows</h1>
-			</header>
 			<main class="contenido">
 				<div>
 					<h1>Snake it!</h1>
 					<h2 id="score">Score: {{points}}</h2>
 				</div>
-                <canvas id="gc" width="700" height="400"></canvas>
+                <canvas id="areaJuego" width="400" height="400"></canvas>
 			</main>
             <aside class="sidebar">
-                <h1>Sidebar</h1>
+				<h1>Sidebar</h1>
             </aside>
+			<footer class="footer">
+				<div class="controllers">
+					<div class="LSide">
+						<button class="BL">BL</button>
+						<button class="BR">BR</button>
+					</div>
+					<div class="Rside">
+						<button class="BU">BU</button>
+						<button class="BD">BD</button>
+					</div>
+				</div>
+			</footer>
 		</div>
 
 		<script src="script.js"></script>
