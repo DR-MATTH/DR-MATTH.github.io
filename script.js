@@ -67,7 +67,8 @@ function game() {
 	lienzo.fillStyle = 'red'
 	lienzo.fillRect(ax * gs, ay * gs, gs - 2, gs - 2)
 }
-function keyPush(evt) {
+
+function keyPush(evt) { 		// flechas del teclado
 	switch (evt.keyCode) {
 		case 37:
 			xv = -1
@@ -87,3 +88,21 @@ function keyPush(evt) {
 			break
 	}
 }
+function left() {
+	xv = -1
+	yv = 0
+}
+function right() {
+	xv = 1
+	yv = 0
+}
+function up() {
+	xv = 0
+	yv = -1
+	
+}
+function down() {
+	xv = 0
+	yv = 1
+}
+
