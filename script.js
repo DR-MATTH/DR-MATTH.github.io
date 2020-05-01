@@ -1,6 +1,6 @@
 window.onload = function () {
-	canv = document.getElementById('gc')
-	ctx = canv.getContext('2d')
+	canvas = document.getElementById('areaJuego')
+	lienzo = canvas.getContext('2d')
 	document.addEventListener('keydown', keyPush)
 	setInterval(game, 1000 / 5) // frecuencia (milisegundos)
 }
@@ -23,6 +23,7 @@ ax = ay = 15
 xv = yv = 0
 trail = []
 tail = 5
+
 function game() {
 	px += xv
 	py += yv
@@ -38,17 +39,20 @@ function game() {
 	if (py > tc - 1) {
 		py = 0
 	}
-	ctx.fillStyle = 'antiquewhite'
-	ctx.fillRect(0, 0, canv.width, canv.height)
+	lienzo.fillStyle = 'antiquewhite'
+	lienzo.fillRect(0, 0, canvas.width, canvas.height)
 
-	ctx.fillStyle = 'lime'
+	lienzo.fillStyle = 'lime'
+
 	for (var i = 0; i < trail.length; i++) {
-		ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2)
-		if (trail[i].x == px && trail[i].y == py) {
+		lienzo.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2)
+
+		if (trail[i].x == px && trail[i].y == py) { // DIE
 			tail = 5
 		}
 	}
 	trail.push({x: px, y: py})
+
 	while (trail.length > tail) {
 		trail.shift()
 	}
@@ -59,8 +63,9 @@ function game() {
 		ay = Math.floor(Math.random() * tc)
 		score.increaseScore()
 	}
-	ctx.fillStyle = 'red'
-	ctx.fillRect(ax * gs, ay * gs, gs - 2, gs - 2)
+
+	lienzo.fillStyle = 'red'
+	lienzo.fillRect(ax * gs, ay * gs, gs - 2, gs - 2)
 }
 function keyPush(evt) {
 	switch (evt.keyCode) {
