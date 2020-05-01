@@ -11,12 +11,12 @@ var score = new Vue({
 	data: {
 		points: 0,
 	},
-	methods: {
-		increaseScore: function () {
+	methods: {		// FUNCIONES DEL OBJETO
+		increaseScore: () => {
 			this.points++
 		},
-		resetScore: function () {
-			this.points = 0
+		resetScore: () => {
+			this.points++
 		},
 	},
 })
