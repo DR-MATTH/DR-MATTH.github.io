@@ -5,7 +5,8 @@ window.onload = function () {
 	setInterval(game, 1000 / 5) // frecuencia (milisegundos)
 }
 
-var score = new Vue({       //JSON
+//	formato	JSON
+var score = new Vue({
 	el: '#score',
 	data: {
 		points: 0,
@@ -13,6 +14,9 @@ var score = new Vue({       //JSON
 	methods: {
 		increaseScore: function () {
 			this.points++
+		},
+		resetScore: function () {
+			this.points = 0
 		},
 	},
 })
@@ -47,8 +51,10 @@ function game() {
 	for (var i = 0; i < trail.length; i++) {
 		lienzo.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2)
 
-		if (trail[i].x == px && trail[i].y == py) { // DIE
+		if (trail[i].x == px && trail[i].y == py) {
+			// DIE
 			tail = 5
+			score.resetScore()
 		}
 	}
 	trail.push({x: px, y: py})
@@ -68,7 +74,8 @@ function game() {
 	lienzo.fillRect(ax * gs, ay * gs, gs - 2, gs - 2)
 }
 
-function keyPush(evt) { 		// flechas del teclado
+function keyPush(evt) {
+	// flechas del teclado
 	switch (evt.keyCode) {
 		case 37:
 			xv = -1
@@ -99,10 +106,8 @@ function right() {
 function up() {
 	xv = 0
 	yv = -1
-	
 }
 function down() {
 	xv = 0
 	yv = 1
 }
-
