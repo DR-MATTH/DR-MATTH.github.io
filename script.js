@@ -21,6 +21,7 @@ var score = new Vue({
 	},
 })
 
+
 px = py = 10
 gs = tc = 20
 ax = ay = 15
@@ -54,6 +55,7 @@ function game() {
 		if (trail[i].x == px && trail[i].y == py) {
 			// DIE
 			tail = 5
+			console.log('if ')
 			score.resetScore()
 		}
 	}
