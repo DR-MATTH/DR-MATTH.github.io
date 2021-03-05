@@ -65,7 +65,8 @@ footer {
 }
 .sombra {
 	position: absolute;
-	bottom: 0px;
+	width: 100%;
+	bottom: 10px;
 }
 .form li {
 	padding: 10px;
