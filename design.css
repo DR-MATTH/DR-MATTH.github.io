@@ -55,8 +55,11 @@ nav li a:hover {
 	border:5px solid var(--green-color);
 }
 .main_section {
-	position: absolute;
+	position: relative;
 	left: 40%;
+}
+.container {
+	padding: 20px;
 }
 footer {
 	position: absolute;
