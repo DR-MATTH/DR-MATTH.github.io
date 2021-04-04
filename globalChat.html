@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,31 @@
     <title>Chat Global</title>
 </head>
 <body>
-    <input type="text" id="mensaje">
-    <button id="boton">Enviar Mensaje</button>
+    <input type="text" id="message">
+    <button id="button">Enviar Mensaje</button>
     <ul id="chat">
 
     </ul>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script type="text/javascript">
+        let socket = io("http://localhost:5000")
+        socket.on('connect', () => {
+            socket.emit('home', 'connection created!')
+        })
+
+        let chat = document.getElementById('chat')
+        let button = document.getElementById('button')
+        let message = document.getElementById('message')
+
+        button.addEventListener('click', () => {
+            console.log(message.value)
+            socket.emit('new_message', message.value)
+            message.value = ""
+        })
+
+        socket.on('new_message', (message) => {
+            chat.innerHTML += `<li>${message}</li>`
+        })
+    </script>
 </body>
 </html>
