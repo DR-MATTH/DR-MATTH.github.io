@@ -7,9 +7,11 @@
     <title>Chat Global</title>
 </head>
 <body>
-    <script>
-        const API = 'https://drmatthapi.herokuapp.com/'
-        fetch(`${API}`).then(res => res.text()).then(res => console.log(res))
-    </script>
+    <input type="text" id="mensaje">
+    <button id="boton">Enviar Mensaje</button>
+    <ul id="chat">
+
+    </ul>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
 </body>
 </html>
