@@ -14,7 +14,7 @@
     </ul>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
     <script type="text/javascript">
-        let socket = io("http://localhost:5000")
+        let socket = io("https://drmatthapi.herokuapp.com")
         socket.on('connect', () => {
             socket.emit('home', 'connection created!')
         })
