@@ -57,6 +57,7 @@ nav li a:hover {
 .main_section {
 	position: relative;
 	left: 40%;
+	z-index: 1;
 }
 footer {
 	position: absolute;
@@ -67,6 +68,7 @@ footer {
 	position: absolute;
 	width: 100%;
 	bottom: 10px;
+	z-index: 0;
 }
 .form li {
 	padding: 10px;
@@ -75,4 +77,8 @@ footer {
 	position: fixed;
 	top: 0;
 	left: 40%;
+}
+.data {
+	padding: 20px;
+	z-index: 1;
 }
