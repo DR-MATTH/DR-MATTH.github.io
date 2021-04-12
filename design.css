@@ -58,9 +58,6 @@ nav li a:hover {
 	position: relative;
 	left: 40%;
 }
-.container {
-	padding: 20px;
-}
 footer {
 	position: absolute;
 	bottom: 5px;

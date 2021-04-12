@@ -6,3 +6,14 @@ window.addEventListener('scroll', () => {
   else 
     main.classList.remove('stick')
 })
+
+let alto = document.getElementById('alto')
+let ancho = document.getElementById('ancho')
+
+alto.textContent = window.innerHeight
+ancho.textContent = window.innerWidth
+
+window.addEventListener('resize', () => {
+  alto.textContent = window.innerHeight
+  ancho.textContent = window.innerWidth
+})
