@@ -19,7 +19,3 @@ window.addEventListener('resize', () => {
   alto.textContent = window.innerHeight
   ancho.textContent = window.innerWidth
 })
-window.addEventListener('orientationchange', () => {
-  alto2.textContent = window.innerHeight
-  ancho2.textContent = window.innerWidth
-})
