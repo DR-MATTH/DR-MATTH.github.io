@@ -80,5 +80,5 @@ footer {
 }
 .data {
 	padding: 20px;
-	z-index: 1;
+	z-index: 10;
 }
