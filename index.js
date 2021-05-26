@@ -9,11 +9,9 @@ window.addEventListener('scroll', () => {
 
 let alto = document.getElementById('alto')
 let ancho = document.getElementById('ancho')
-let alto2 = document.getElementById('alto2')
-let ancho2 = document.getElementById('ancho2')
 
-alto.textContent = alto2.textContent = window.innerHeight
-ancho.textContent = ancho2.textContent = window.innerWidth
+alto.textContent = window.innerHeight
+ancho.textContent = window.innerWidth
 
 window.addEventListener('resize', () => {
   alto.textContent = window.innerHeight
